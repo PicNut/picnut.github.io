@@ -25,7 +25,7 @@
     .then(data => {
       const temp = data.now.temp;
       const text = data.now.text;
-      const tempRange = today.tempMax + '℃ ~ ' + today.tempMin + '℃';
+      const tempRange = daily.tempMax + '℃ ~ ' + daily.tempMin + '℃';
       document.getElementById('weather').innerHTML = temp + '℃ ' + text + tempRange;
     })
     .catch(() => {
