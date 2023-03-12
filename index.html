@@ -20,7 +20,7 @@
       setInterval(showTime, 1000);
 
       function getWeather() {
-  fetch('https://devapi.qweather.com/v7/weather/now?location=101200101&key=YOUR_KEY')
+  fetch('https://devapi.qweather.com/v7/weather/now?location=101200101&key=8844a3385a294b808985aa0d47342b4d')
     .then(response => response.json())
     .then(data => {
       const temp = data.now.temp;
