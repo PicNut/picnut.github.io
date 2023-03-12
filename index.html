@@ -38,7 +38,7 @@
     .then(data => {
       const tempMax = data.daily.tempMax;
       const tempMin = data.daily.tempMin;
-      document.getElementById('tempRange').innerHTML = data.daily.tempMax + '℃ ~ ' + data.daily.tempMin + '℃';
+      document.getElementById('tempRange').innerHTML = tempMax + '℃ ~ ' + tempMin + '℃';
     })
     .catch(() => {
       document.getElementById('tempRange').innerHTML = '数值更新中';
