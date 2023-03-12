@@ -25,7 +25,8 @@
     .then(data => {
       const temp = data.now.temp;
       const text = data.now.text;
-      document.getElementById('weather').innerHTML = temp + '℃ ' + text;
+      const todayTemperatureRange = data.daily[0].tempMax + ' ~ ' + data.daily[0].tempMin;
+      document.getElementById('weather').innerHTML = temp + '℃ ' + text + todayTemperatureRange;
     })
     .catch(() => {
       document.getElementById('weather').innerHTML = '天气更新中';
