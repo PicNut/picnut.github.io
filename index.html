@@ -35,8 +35,8 @@
   fetch('https://devapi.qweather.com/v7/weather/3d?location=101200101&key=8844a3385a294b808985aa0d47342b4d')
     .then(response => response.json())
     .then(data => {
-      const tempMax = data.daily.tempMax;
-      const tempMin = data.daily.tempMin;
+      const tempMax = data.daily[0].tempMax;
+      const tempMin = data.daily[0].tempMin;
       document.getElementById('tempRange').innerHTML = tempMax + '℃ ~ ' + tempMin + '℃';
     })
     .catch(() => {
